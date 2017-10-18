@@ -34,6 +34,15 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+
+"Cursor
+if &term =~ "xterm\\|rxvt"
+        "cursor color insert mode"
+        let &t_EI = "\<Esc>]12;red\x7"
+        silent !echo -ne "\033]12;red\007"
+endif
+        
+
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
@@ -50,8 +59,24 @@ endif
 
 "OWN CHANGES
 "
+"Plugins
+call plug#begin('~/.vim/plugged')
+
+ Plug 'itchyny/lightline.vim'
+ Plug 'morhetz/gruvbox'
+
+call plug#end()
+
 "lightline.vim
-Plugin 'itchyny/lightline.vim'
+set laststatus=2
+set noshowmode
+
+"no delay while changing modes
+set timeoutlen=1000 ttimeoutlen=0
+
+"cursor shit
+set cursorline
+
 
 set rnu
 set nu
@@ -67,9 +92,13 @@ set ignorecase
 set smartcase
 
 "color themes
-set termguicolors
-"set background=dark
+"
+set t_Co=256
+set background=dark
+"set termguicolors
+
+let g:gruvbox_contrast_dark='hard'
 "colors elflord
-colorscheme ron 
+colorscheme gruvbox 
 "colorscheme slate
 

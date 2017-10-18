@@ -123,6 +123,8 @@ export _SP_SVN_PATH="${HOME}/Documents/sp/ueb/"
 PATH="/home/fuk/Documents/sp/ueb/bin${PATH:+:${PATH}}";
 PATH="/home/fuk/perl5/bin${PATH:+:${PATH}}"; export PATH;
 
+#source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
+
 
 
 PERL5LIB="/home/fuk/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
