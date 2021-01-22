@@ -1,0 +1,18 @@
+"plugins"
+"s/S + 2 Letters to jump"
+set sneak
+"further jumps when pressing ; twice"
+let mapleader=";"
+set easymotion
+"cs + firstsurroundingletter + replacedby"
+set surround
+"<A-n> <A-x> <A-p> g<A-n>"
+set multiple-cursors
+
+
+"copy to clipboard"
+set clipboard+=unnamedplus
+"remap exit insert mode"
+:imap <S-Space> <Esc>
+:nmap <S-Space> i
+
