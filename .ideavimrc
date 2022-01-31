@@ -13,6 +13,5 @@ set multiple-cursors
 "copy to clipboard"
 set clipboard+=unnamedplus
 "remap exit insert mode"
-:imap <S-Space> <Esc>
-:nmap <S-Space> i
+"remapping done on system level to capslock"
 
